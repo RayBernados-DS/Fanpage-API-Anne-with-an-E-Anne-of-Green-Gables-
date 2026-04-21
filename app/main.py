@@ -11,6 +11,9 @@ app = FastAPI(
     title="Anne With An E Fanbase API"
 )
 
+@app.on_event("startup")
+def startup_event():
+    seed_data()
 
 def get_db():
     db = SessionLocal()
