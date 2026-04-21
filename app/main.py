@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-
+from app.seed import seed_data
 from app.database import SessionLocal, engine, Base
 from app.models import Character, Actor
 from app.schemas import CharacterResponse, ActorResponse
